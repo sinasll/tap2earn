@@ -3,35 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tap2Earn Game</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        button { font-size: 20px; padding: 10px 20px; }
-        #points { font-size: 24px; margin: 20px 0; }
-    </style>
+    <title>Tap to Collect Coins</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Tap2Earn Game</h1>
-    <div id="points">Points: 0</div>
-    <button id="tapButton">Tap to Earn</button>
-    <button id="redeemButton">Redeem Points</button>
-
-    <script>
-        let points = 0;
-        const pointsDisplay = document.getElementById('points');
-        const tapButton = document.getElementById('tapButton');
-        const redeemButton = document.getElementById('redeemButton');
-
-        tapButton.addEventListener('click', () => {
-            points += 1;
-            pointsDisplay.textContent = `Points: ${points}`;
-        });
-
-        redeemButton.addEventListener('click', () => {
-            alert(`You have ${points} points.`);
-            points = 0;
-            pointsDisplay.textContent = `Points: ${points}`;
-        });
-    </script>
+    <div class="game-container">
+        <h1>Tap to Collect Coins!</h1>
+        <div class="coin-container">
+            <img src="coin.png" alt="Coin" id="coin" />
+        </div>
+        <div class="score">
+            <p>Coins Collected: <span id="score">0</span></p>
+        </div>
+        <button id="tap-button">Tap to Collect Coin</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
